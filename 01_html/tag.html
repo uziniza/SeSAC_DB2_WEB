@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 유니코드 인코딩 방식 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 모바일 화면 -->
+    <title>태그 사용해보기!</title>
+</head>
+<body>
+    <h1>안녕하세요,, h1 입니다</h1>
+    <h2>안녕하세요,, h2 입니다</h2>
+    <h3>안녕하세요,, h3 입니다</h3>
+    <h4>안녕하세요,, h4 입니다</h4>
+    <h5>안녕하세요,, h5 입니다</h5>
+    <h6>안녕하세요,, h6 입니다</h6>
+    <!-- h1 태그에는 하나만 사용 -->
+    <p>오늘은 날씨가 좋습니다.. 첫번째 수업인 html <br />
+        재밋서여
+    </p>
+    <hr />
+    <!-- 순서가 있는 리스트와 없는 리스트 -->
+    <h3>아이스라떼 만드는법</h3>
+     <!--ol 타입 : 1(디폴트), a, A, i,none  -->
+    <ol type="I">
+        <li><b>우유</b>를 <strong>컵</strong>에 넣습니다</li>
+        <li><i>얼음</i>도 넣어봐요</li>
+        <li><em>에스프레소</em> 샷을 넣으세요</li>
+     </ol>
+     <h3>오늘의 할 일</h3>
+     <!-- ul type : disc(디폴트), circle, square, none -->
+     <ul type="square">
+        <li><u>html</u> 공부하기</li>
+        <li>운동하기</li>
+        <li><del>공부</del>하기</li>
+     </ul>
+
+     <!-- 리스트 중첩해보기! -->
+      <ul>
+        <h3>내가 좋아하는 음식</h3>
+        <li>양식
+            <ul type="circle">
+                <li>스파게티</li>
+                <li>스테이크</li>
+            </ul>
+        </li>
+        <li>일식
+            <ul type="circle">
+                <li>돈까스</li>
+                <li>라멘</li>
+            </ul>
+        </li>
+      </ul>
+      <p>안녕하세요.          .</p>
+      <pre>안녕하세요.             .</pre>
+      <details>
+        <summary>summary에는 제목을 써보자</summary>
+        <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti aperiam at incidunt, blanditiis unde aspernatur!
+        <!-- 테스트용 긴단어 -> lorem+단어 숫자, detail과 summary 함께,, summary 밑에 사용하면 내용 숨겨짐 -->
+         <!-- 인터넷 익스플로러에서는 작동 안함 -->
+        </div>
+      </details>
+      <hr>
+      <h2>img 태그와 a태그</h2>
+      <!-- img 태그의 필수 속성 : src, alt -->
+      <!-- a태그 필수 속성 : href  -->
+       <img src="https://search.pstatic.net/sunny/?sr=https%3A%2F%2Fimg3.dcinside.com%2FPUD%2Fpk%2Fs4011%2FIMG%2F20111216%2F1324040536_201112162203182149209001_0.jpg&type=sc960_832" alt="햄스터 사진" width="200" height="2
+       00" />
+       <img src="./푸우.jpeg" alt="푸우사진" width="100" >
+       <!-- /는 vs 코드기준 맨 위 -> ssac_2을 가르킴 (상대경로)/의 의미가 매번 달라질 수 있음-->
+       <!-- ./자기자신이 있는 위치(점이 들어있는게 더 찾기 쉬움) (절대경로)-->
+        <br />
+<!-- a태그 -->
+ <a href="http://www.naver.com" target="_self">네이버로 이동!</a>
+ <!-- 있던 페이지에서 이동 -->
+ <a href="http://www.naver.com" target="_blank">네이버로 이동!</a> 
+ <!-- 새로운페이지로 이동 -->
+ <a href="./start.html" target="_self">starthtml로 이동</a> 
+<br>
+ <!-- 간단 실습 : 새로운 사진 저장 -> 저장 사진이 구글로 이동되도록 -->
+ <a href="http://www.google.com" target="_self"><img src="./푸우.jpeg" alt="푸우사진" width="100"></a>
+</body>
+</html>
