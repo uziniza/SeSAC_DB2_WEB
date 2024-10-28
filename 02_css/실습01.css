@@ -1,0 +1,18 @@
+.background{
+background-color: orange; width: auto; height: 200px;
+}
+.square{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin-right: 30px;
+}
+#html{
+    background-color:aqua
+}
+#css{
+    background-color:green
+}
+#javascript{
+    background-color: red
+}

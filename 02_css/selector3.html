@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자3 - 가상요소선택자, 가상class선택자</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 100px;
+        }
+        /* 가상클래스 선택자 */
+        /* #1-1. 동작과 관련된 선택자 : hover, active, focus, visit */
+        /* 
+        - E:active{} - E 요소에 마우스 클릭 또는 키보드 엔터가 "눌리는 동안"만 선택
+        - E:hover{} - E 요소에 마우스가 올라가 있는 동안만 선택
+        - E:focus{} - E 요소에 포커스가 머물러 있ㄴ는 동안(input, textarea...)
+        - E:visited{} - E 요소가 링크일때, 해당 링크에 방문한적 있을때 선택
+        - E:checked{} - E 요소가 체크되었을 때 (input-radio, checkbox)
+        */
+        .div1:hover{
+            background-color: aqua;
+            height: 150px;
+        }
+        .div1:active{
+            background-color: purple;
+            width: 150px;
+        }
+
+        input:focus{background-color: violet;
+        color: pink; outline-color: aquamarine;}
+
+        .links > a{
+            font-size: 20px;
+        }
+        .links > a:hover{
+            background-color: salmon;
+        }
+        .links>a:active{
+            background-color: blue;
+        }
+        .links > a:visited{
+            color: bisque;
+        }
+
+        /* #1-2. 요소의 상황과 관련된 선택자 */
+        /* - E : first- child{} - E가 첫번째 자식이라면 선택
+        - E : last- child{} -E가 막내 자식이라면 선택
+        - E : ntn-child(n) child{}-E가 n번째 자식이라면 선택
+        - E : not(xyx){}-E요소중에서 xyz아닌것만 선택*/
+        .zoo>*{
+            /* zoo클래스의 자식 모두를 선택 */
+            background-color: green;
+            color: white;
+            font-size: 14px;
+        }
+        /* zoo 클래스에서 panda의 스타일만 바꾸기 (마지막이면서, li 태그일때만 적용)*/
+        .zoo >li:last-child{
+            background-color: black;
+        }
+         /* zoo 클래스에서 동물원의 스타일만 바꾸기 */
+        .zoo >*:first-child{
+            background-color: yellowgreen;
+        }
+         /* zoo 클래스에서 li의 짝수번째 스타일만 바꾸기(div에는 적용 안됨)*/
+         .zoo > li:nth-child(even){
+            background-color: pink;
+         }
+         /* not */
+         .zoo > *:not(div){
+            background-color: aquamarine;         }
+
+
+        /* 가상요소 선택자 */
+
+        .div2{
+            background-color: orange;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .div2::after{
+            content:'after';
+            background-color: aliceblue;
+            color: aquamarine;
+        }
+        .div2::before{
+            content:'';
+            background-color: rgb(17, 104, 180);
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 가상클래스 선택자 ; HOVER, ACTIVE -->
+    <div class="div1">
+        <span>div1</span>
+    </div>
+    
+    <!-- 가상클래스 선택자 ; HOVER, ACTIVE, FOCUS -->
+     <input type="text"  />
+     <div class="links">
+        <a href="http://www.naver.com">네이버</a>
+        <a href="http://www.google.com">구글</a>
+        <a href="http://www.google.co">방문한적 없음</a>
+     </div>
+
+     <hr>
+     <ul class="zoo">
+        <h1>동물원입니다.</h1>
+        <div>원숭이</div>
+        <li>lion</li>
+        <li>rabbit</li>
+        <li>tiger</li>
+        <li>elephant</li>
+        <li>puppy</li>
+        <div>코알라</div>
+        <li>panda</li>
+     </ul>
+
+     <!-- 가상요소선택자 -->
+      <div class="div2">가상요소 선택자</div>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+    <!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 종합실습</title>
+    <style>
+      form {
+        width: 400px;
+      }
+      /* focus */
+      textarea:focus{
+        background-color: pink;
+        outline-color: black;
+      }
+
+      textarea {
+        width: 100%;
+      }
+      h3:hover{
+        background-color: black;
+        color: white;
+      }
+      /* checked */
+      input[type="checkbox"]#red:checked +label{
+        background-color: red;
+      }
+      input[type="checkbox"]#blue:checked +label{
+        background-color: blue;
+      }
+      input[type="checkbox"]#yellow:checked +label{
+        background-color: yellow;
+      }
+      /* active */
+      
+      button{
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+      }
+      button:active{background-color: gray;}
+    </style>
+  </head>
+  <body>
+    <h3>건의 사항을 적어주세요!</h3>
+    <form>
+      <!-- label
+        - 명시적 방식: id와 for 맞춰주기
+        - 암시적 방식: label 내부에 input 쓰기 
+            - checkbox 사용 시 명시적 방식으로 진행하기	
+      -->
+
+      <!-- checkbox와 textarea 만들기 -->
+       <textarea placeholder="건의사항" cols="50px" rows="10px"></textarea>
+       
+       <input type="checkbox" name="color" id="red"> 
+       <label for="red">빨강</label>
+     <!-- 둘은 부모자식 관계가 아니고 동등한 형제관계이기 때문에
+      형제 묶음 +를 사용해야함 -->
+       
+     
+       <input type="checkbox"name="color"id="blue">
+       <label for="blue">파랑</label>
+       
+       
+       <input type="checkbox"name="color" id="yellow">
+       <label for="yellow">노랑</label>
+
+
+      <button>제출</button>
+    </form>
+  </body>
+</html>
+
+</body>
+</html>

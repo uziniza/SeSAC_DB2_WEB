@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jua&family=Orbitron:wght@400..900&display=swap');
+@font-face {
+    font-family: 'YeongamWolchulsanTTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/YeongamWolchulsanTTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* body{ 
+    font-family: 'YeongamWolchulsanTTF';
+
+} */
+/* body{
+    background-color: pink;
+} */
+
+
+.font-link{
+    font-family: "Jua", sans-serif;
+}
+
+.font-import{
+    font-family: "Jua", sans-serif;
+}
+.noonnu_font{
+    font-family:'YeongamWolchulsanTTF', sans-serif;
+}
+
+.container{
+    background-color: gold;
+    /* 글자색은 기본적으로 상속 */
+    color: gray;
+}
+.container > .sentences{
+     /* font-weight: 글씨 굵기 */
+    font-weight: 700;
+
+    /* font-size: 글씨 크기(디폴트 16px) */
+    font-size: 16px;
+
+    /* font-size: 1rem or 1em; */
+    /* text-align: 정렬 */
+    text-align: center;
+    text-align: justify;
+    text-align: left;
+    text-align: right;
+
+    /* text-decoration: 문자 꾸미기 속성 */
+    /* text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: overline; */
+
+    /* line height : 줄간 간격 */
+    line-height: 1;
+    line-height: 20px;
+}
+
+.test{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    text-align: center;
+    /* 글이 한 줄일때는 세로기준 가운데 정렬로 사용한다. */
+    line-height: 100px;
+}
+
+.container a{
+    color: aqua;
+    text-decoration: none;
+    /* 색상지정방법 
+    1) 색상이름으로 설정 ex)red, skyblue
+    2) RGB(숫자,숫자,숫자)
+      -0부터 255중에 하나의 숫자가 들어감
+      -rgba(): 투명도 지정
+    3)#_ _ _ _ _ _ :0~9와 a,b,c,d,e,f로 이루어진 수
+      rgb(0,0,0):black(#000000)
+      rgb(255,255,255):white(#ffffff)
+      */
+    
+}
