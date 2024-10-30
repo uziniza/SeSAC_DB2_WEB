@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지렁이 지옥</title>
+    <style>
+        .circle{
+            position: relative;
+            display: inline-block;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+        }
+        .eye{
+            display: inline-block;
+            border-radius: 50px;
+        }
+        .white{
+            position:absolute;
+            top: 20px;
+            left: 20px;
+            background-color: white;
+            width: 40px;
+            height: 40px;
+        }
+        .black{
+            position:absolute;
+            top: 30px;
+            left:20px;
+            background-color: black;
+            width: 20px;
+            height: 20px;
+        }
+        .one{
+            position: relative;
+            left: 100px;
+            top:100px;
+
+            background-color: navy}
+        .two{position:absolute;
+            left: 60px;
+            top: 50px;
+            background-color:rgb(22, 22, 255) ;
+        }
+        .three{position:absolute;
+            left:100px;
+            top: 80px;
+            background-color: rgb(98, 98, 255);
+        }
+        .four{position:absolute;
+            left: 120px;
+            top: 130px;
+            background-color: rgb(124, 124, 255);
+        }
+    
+        .grass{
+            position: fixed;
+            top: 270px;
+            left:0px;
+        }
+        /* grass를 엡솔루트로 하면 부모기준이기떄문에 뷰포트에 여백 생길 수 있음 */
+        .five{position:absolute;
+            left: 180px;
+            top: 170px;
+            background-color: rgb(201, 201, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="circle one">
+        <div class="eye white"></div>
+        <div class="eye black"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+        <div class="grass" >
+            <img src="./grass.png" alt="잔디사진">
+        </div>
+        <div class="circle five"></div>
+        <!-- html 순서로 동그라미 밖으로 나오도록함 -->
+    </div>
+</body>
+</html>

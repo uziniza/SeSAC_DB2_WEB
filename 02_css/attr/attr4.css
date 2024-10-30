@@ -12,7 +12,7 @@
     background: linear-gradient(grey, pink);
 }
 .background-image{
-    background-image: url(./img/small_img.png);
+    background-image: url(../실습/css02/img/small_img.png);
     /* 1.; background-repeat */
     background-repeat: repeat;
     background-repeat: repeat-x;
@@ -32,8 +32,8 @@
     background-size: contain;
     background-size: cover;
     /* 4. background attachment */
+    /* background-attachment: fixed; */
     background-attachment: scroll;
-    background-attachment: fixed;
 
 
 }

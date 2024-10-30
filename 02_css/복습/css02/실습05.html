@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습05</title>
+    <style>
+        .container{
+            background-image: url(https://i.namu.wiki/i/AGwhfLbqwPfe613VURNaKVefq1E_bf1MeC5HiML8DxigsOZWQy4Fs9hPmcf24nR8QJAlwj5P8NrNEJX-Vst7tw.webp);
+            background-color: skyblue;
+            width: 800px;
+            height: 500px;
+        }
+        .box1{
+           
+            background-size: contain;
+            background-position:top center ;
+            background-repeat: repeat-x;
+        }
+        .box2{
+            background-size: contain;
+            /* background-position-x: 100px;
+            background-position-y: 30px;  */
+            background-position: 100px 30px;
+        }
+        .box3{
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container box1"></div>
+    <div class="container box2"></div>
+    <div class="container box3"></div>
+</body>
+</html>
+<!-- 실습 배경 적용하기
+• 800px 500px 배경색 하늘색 div 선언 x 3
+• 1번 div
+• 라이언 이미지 크기 그대로 수직 중앙에 배치, x 축으로만 반복하도록 설정
+• 2번 div
+• 라이언 이미지의 크기를 짧은 축에 맞추고, 
+왼쪽에서 100px 위에서 30px 떨어지도록 설정
+• 3번 div
+• 라이언 이미지의 크기를 긴 축에 맞추고, 포지션 값 조정해 보기
