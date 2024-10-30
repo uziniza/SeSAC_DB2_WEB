@@ -19,8 +19,62 @@
     <br><br>
     <!--span.d-inline-block*3{inline-block$}  -->
     <!-- span.d-inline-block*3{inline-block $} -->
-    <span class="d-inline-block">inline-block 1</span><span class="d-inline-block">inline-block 2</span><span class="d-inline-block">inline-block 3</span>
+    <sspan class="d-inline-block">inline-block 1</sspan><span class="d-inline-block">inline-block 2</span><span class="d-inline-block">inline-block 3</span>
+    
+    <h2>maxwidth,minwidth</h2>
+    <div class="parent">
+        <div class="min"></div>
+        <div class="max"></div>
+    </div>
 
+    <h2>단위</h2>
+    <!-- .box*3 -->
+    <div class="box box-px">px</div> 
+    <!-- 두개의 클래스를 가질 수 있음 :띄어쓰기 ;box 와 box-px클래스 -->
+    <div class="box box-view">viewport(vh,vw)</div>
+    <div class="box box-per">%</div>
+    <div class="rem">rem
+        <div class="rem">rem
+            <div class="rem">rem</div>
+        </div>
+    </div>
+    <div class="em">em
+        <div class="em">em
+            <div class="em">em
+        </div>
+        </div>
+    </div>
+
+    <h2>border, border-radius</h2>
+    <div class="square border">border</div>
+    <div class="square rounded"></div>
     
-    
+    <h2>box-sizing</h2>
+    <div class="square box-sizing content-box">얍</div>
+    <div class="square box-sizing border-box">얍</div>
+
+    <h2>모습 안보이게 하기</h2>
+    <div class="square">original</div>
+    <div class="square d-none">d-none</div> 
+    <div class="square invisible"> invisible</div> <div class="square opacity-0">opacity-0</div>
+    <div class="square">original</div>
+
+    <h2>overflow</h2>
+    <div class="square overflow-hidden">
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea et laboriosam reiciendis placeat aperiam officiis.</p> -->
+        <img src="./img/pooh.png" alt="푸사진">
+    </div>
+    <div class="square overflow-auto">
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam accusamus libero assumenda saepe minima maxime!</p> -->
+        <!-- <img src="./img/pooh.png" alt="푸사진"> -->
+    </div>
+    <div class="square overflow-scroll">
+        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quos ipsa facilis dolores. Maiores, totam.</p>
+        <img src="./img/pooh.png" alt="푸사진"> -->
+    </div>
+    <div class="square overflow-visible">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perferendis nulla sit molestiae, eaque tempora.</p>
+        <img src="./img/pooh.png" alt="푸사진">
+    </div>
+ </body>  
 </html>

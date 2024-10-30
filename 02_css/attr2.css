@@ -33,3 +33,129 @@
     padding: 10px;
     margin: 10px;
 }
+.parent{
+    width: 500px;
+    height: 250px;
+    background-color: aquamarine;
+}
+.parent > .min{
+    min-width: 400px;
+    height: 100px;
+    background-color: greenyellow;
+    
+}
+.parent > .max{
+    max-width: 400px;
+    height: 100px;
+    background-color: red;
+
+}
+
+/* 단위 확인 */
+.box{
+    background-color: beige;
+    border: 1px solid black;
+}
+.box-px{
+    width: 50px;
+    height: 50px;
+}
+.box-view{
+    width: 50vw;
+    height: 50vh;
+}
+/* viewport : 브라우저의 body영역; 우리가 보이는 네모칸 안
+vw(가로) 뷰포트의 50% vh(세로) 뷰포트의 50% */
+.box-per{
+    width: 100%;
+    height: 50%;
+    /* 부모 넓이의 50% 여기서는 box-per의 부모는 body
+    컨텐츠 양이 정해져있기 때문에 양이 늘어나면 heigth가 늘어나겠지만
+    양이 적기 떄문에 늘어나진 않음*/
+}
+html{
+    font-size: 20px;
+}
+/* html의 폰트사이즈가 1rem */
+.rem{
+    font-size: 2rem;
+}
+/* 부모의 폰트사이즈가 1em */
+.em{
+    font-size: 2em;
+}
+/* 첫번째 자식의 부모는 body(의 1em 은 16px)
+두번째 자식의 부모는 body의 첫번째 .em
+세번째 자식의 부모는 body의 두번쨰 .em 
+점점 커지게 됨*/
+.square{
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    display: inline-block;
+    cursor: pointer;
+}
+.border{
+    /* width, style, color순으로 단축속성 작성 */
+    border: 1px solid black;
+    /* 한번에 쓴거 */
+    border-color: blue;
+    border-style: dotted;
+    border-width: 5px;
+    /* 나눠서쓴거 */
+    border-left: 2px dashed yellowgreen;
+    border-top-style: solid
+}
+.rounded{
+    border-radius: 10%;
+    /* 단축속성 */
+    border-radius: 5px 10px 20px 40px;
+    border-radius: 5px 20px 50px;
+    border-radius: 5px 50px;
+
+}
+
+.box-sizing{
+    border: 15px solid red;
+    padding: 20px;
+    background-color: yellow;
+}
+
+.content-box{
+    box-sizing: content-box;
+}
+.border-box{
+    box-sizing: border-box;
+}
+
+.d-none {
+    display: none;
+    background-color: red;
+  }
+  .invisible {
+    /* visibility: hidden; */
+    background-color: orangered;
+  }
+  
+  .opacity-0 {
+    /* opacity: 0; */
+    background-color: tomato;
+  }
+  .square> img[alt="푸사진"]{
+    width: 200px;
+  }
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  .overflow-auto{
+    overflow: auto;
+  }
+  .overflow-scroll{
+    overflow: scroll;
+  }
+  .overflow-visible{
+    overflow: visible;
+    /* overflow-x: hidden;
+    overflow-y: auto; 이걸 단축속성으로 쓴게 아래거*/
+    overflow: hidden auto;
+  }

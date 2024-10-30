@@ -1,0 +1,19 @@
+.total{
+    border: 1px solid navy;
+}
+.box1{ 
+    border-width: 3px;
+}
+   
+.box2{
+    border-style:dashed
+}
+.box3{
+    border-color: aqua;
+}
+.box4{
+    border-top-style: dashed;
+    border-bottom-style: groove;
+    border-left-style:double;
+    border-right-style: dotted ;
+}
