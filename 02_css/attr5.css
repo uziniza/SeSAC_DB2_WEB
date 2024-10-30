@@ -22,7 +22,7 @@
     
     /* 2. flex-wrap:줄바꿈 설정 
     -no wrap (default)
-    -wrap*/
+    -wr*/
     /* flex-wrap: nowrap; */
     /* flex-wrap: wrap; */
 
@@ -51,4 +51,4 @@
 }
 .container>.items.item5{
     background-color: blue;
-}
+}   

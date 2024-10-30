@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습02</title>
+    <style>
+      
+        .circle{
+            position: relative;
+            left: 60px;
+            top: 60px;
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            
+        }
+        .one{
+            position:relative;
+            background: navy;
+            
+        }
+        .two{
+            position:absolute;
+            top:40px;
+            left:40px;
+            background: rgb(33, 33, 121);
+            
+        }
+        .three{
+            position:absolute;
+            top:30px;
+            left:60px;
+            background: rgb(56, 56, 112);
+            
+        }
+        .four{
+            position:absolute;
+            z-index: 8;
+            top:40px;
+            left:20px;
+            background: rgb(76, 76, 109);
+            
+        }
+        .back{ position: fixed;
+            top: 200px;
+            left:0px;
+            }
+           
+    
+        .five{
+            
+            position:absolute;
+            top:30px;
+            left:40px;
+            background: rgb(78, 78, 85);
+            
+        }
+        .eye{
+            display: block;
+            border-radius: 50px;
+            position:absolute;
+            top:30px;
+            left:30px;
+            background: violet
+
+        }
+        .white{
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50px;
+            position:absolute;
+            top:20px;
+            left:10px;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+        }
+        .black{
+            position:absolute;
+            top:10px;
+            left:1px;
+            width: 20px;
+            height: 20px;
+            background-color: black;s
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+        
+
+
+       <div class="circle one">
+        <div class="eye white">
+            <div class="eye black"></div>
+        </div>
+        
+          <div class="circle two">
+            <div class="circle three">
+                <div class="circle four">
+                    <div class="back">
+                        <img src="./img/grass.png" alt="풀숲입니다">
+                    </div>
+                    <div class="circle five"></div>
+                </div>
+       
+            </div>
+        </div>
+       </div>
+       
+   
+       
+       
+</body>
+</html>
