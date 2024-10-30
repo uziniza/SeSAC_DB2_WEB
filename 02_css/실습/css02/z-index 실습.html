@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aliceblue;
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        .item1{
+            background-color: aqua;
+            position: relative;
+            z-index: 9;
+
+        }
+        .item2{
+            background-color:yellow;
+            top: 30px;
+            left: 60px;
+            position: absolute;
+        }
+        .item3{
+            background-color: black;
+            top: 60px;
+            left: 60px;
+            position:absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box item1"></div>
+        <div class="box item2"></div>
+        <div class="box item3"></div>
+
+    </div>
+</body>
+</html>

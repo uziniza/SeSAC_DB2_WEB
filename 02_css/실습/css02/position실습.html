@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 실습</title>
+    <style>
+        .container{
+            position: relative;
+            /* absolute사용을 위해 부모에 statix이 아닌 포지션-> 대부분 relative로 */
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+        }
+        .item1{
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+            position: relative;
+            left: 50px;
+            top: 30px;
+        }
+       .container>.item2{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+        }
+        .item3{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: fixed;
+            right: 100px;
+            top: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container"> 
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+    </div
+
+
+</body>
+</html>

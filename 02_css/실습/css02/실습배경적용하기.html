@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 배경 적용하기</title>
+    <style>
+        .box{
+            width: 800px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        .first{
+            
+            background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+            background-position: center;
+            background-repeat: repeat-x;
+        }
+        .second{
+            background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+            background-size: contain;
+            background-position: 100px 30px;
+        }
+        .third{background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+            background-size: cover;
+            background-position: 300px, 50px;
+
+
+        }
+
+
+</style>
+</head>
+<body>
+    <div class="box first"></div>
+    <div class="box second"></div>
+    <div class="box third"></div>
+    
+</body>
+</html>
