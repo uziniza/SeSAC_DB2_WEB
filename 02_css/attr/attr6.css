@@ -34,7 +34,6 @@ transform: perspective(200px) rotateX(45deg);
 /* 3d처럼 보이게 하려면 원근(perspective)사용
 변화를 크게 보게=> perspextive 작은 숫자로 */
 transform: perspective(400px) rotateY(180deg);
-
 /* backface-visiblity: 뒷면 보여줌 */
 backface-visibility: visible;
 backface-visibility: hidden;

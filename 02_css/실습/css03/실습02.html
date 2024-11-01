@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습02</title>
+    <style>
+        .container{
+            background-color: whitesmoke;
+            width: 1000px;
+            height: 1000px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .img{
+            position: relative;
+           transform:skewY(35deg);
+           transition: 2s;
+            
+            
+        }
+        .first{
+            position:absolute;
+            top: 500px;
+            left: 100px;
+            z-index: 8;
+        }
+        .second{
+            position:absolute;
+            top: 500px;
+            left: 300px;
+            z-index: 7;
+        }
+    
+        .third{
+            position:absolute;
+            top: 500px;
+            left: 500px;
+            z-index: 6;
+        }
+        .img:hover{
+            transform: skewY(0deg);
+            z-index: 10;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img first"> <img src="./beach1.jpg" alt="해변" width="300px" height="200px"></div>
+        <div class="img second"> <img src="./beach2.jpg" alt="해뱐" width="300px" height="200px"></div>
+        <div class="img third"> <img src="./beach3.jpg" alt="해변"width="300px" height="200px"></div>
+    </div>
+    
+</body>
+</html>

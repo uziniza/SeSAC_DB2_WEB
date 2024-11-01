@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox 마스터 - header 만들기</title>
+    <style>
+
+        /* 1번 */
+
+        header{
+            padding: 0 20px;
+        }
+        header ul{
+            padding: 0;
+            list-style: none;
+        }
+        .header1{
+            display: flex;
+            background-color: gray;
+            flex-direction: row;
+            max-width: 1920px;
+            min-height: 45px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header1> span{
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            
+        }
+        
+        .header1> .menus{
+            display: flex;
+            flex-direction: row;
+        }
+        .header1> .menus> li{
+            margin-right: 20px;
+
+        }
+
+        /* 2번 */
+        .header2{
+            background-color: gray;
+        }
+        .header2>.menus{
+            display: flex;
+            flex-direction: row;
+            max-width: 1920px;
+            min-height: 45px;
+            justify-content: space-between;
+            align-items: center;
+            /* margin-right: 10px; */
+            /* margin-left: 0px; */
+            padding: 0;
+
+            
+        }
+
+        /* 3번 */
+        .header3{
+            display: flex;
+            background-color: gray;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header3 li{
+            margin-right: 10px;
+        }
+        .header3>ul{
+            display:flex;
+            flex-direction: row;
+            justify-self: center;
+
+        }
+        .header3>span{
+            /* margin-left: 10px;
+            margin-right: 10px; */
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Flex를 이용해 여러 종류의 Header를 만들어보자!</h1>
+    <br />
+    <!-- header1 -->
+    <header class="header1">
+      <span>LOGO</span>
+      <ul class="menus">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+    </header>
+    <br />
+    <hr />
+    <br />
+    <!-- header2 -->
+    <header class="header2">
+      <ul class="menus">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+    </header>
+    <br />
+    <hr />
+    <br />
+    <!-- header3 -->
+    <header class="header3">
+      <span>LOGO</span>
+      <ul>
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+      <span>LOGIN</span>
+    </header>
+  </body>
+</html>
