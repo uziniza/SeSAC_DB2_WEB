@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-wrap</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-wrap: nowrap; */
+            flex-direction: column;
+            flex-direction: row;
+            /* align-content: flex-start; */
+            align-items: flex-start;
+
+
+            
+
+        }
+        .box{
+            width: 100px;
+           height: 100px;
+           background-color: palevioletred;
+           border: 1px white solid;
+           /* margin-right: 10px; */
+           
+           
+           
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

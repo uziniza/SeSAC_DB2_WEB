@@ -1,0 +1,102 @@
+/* 
+transition vs animation
+1) transition 
+- 자연스러운 변경을 위해 설정
+- hover, onclick 등 동작(=이벤트)발생에 의해 발생
+- 처음과 끝(ex. 호버전 호버후)
+2) animation
+- 중간 step들을 지정하여 보다 세밀한 스타일 전환 가능
+- @keyframes로 이루어짐
+<단축속성 순서 (name, duratation 필수값)>
+animation: name duration timing-function delay iteration-count direction;
+- animation-name : @keyfranes로 만들어진 애니메이션 이름
+- animation-duration : 한 사이클의 애니메이션이 어떤 시간 간격으로 진행할지 설정(단위:s)
+- animation-timing-function : 중간상태의 전환을 어떤 시간 간격으로 진행할지 설정
+  ex) linear, ease(default), ease-in, ease-in-out, ease-out
+- animation-delay : 애니메이션을 지연시킬 수 있는 속성 (default :0s)
+- animation-iteraction-count : 애니메이션이 반복되는 횟수 (default : 1)
+- animation-direction : 애니메이션이 반복될때 진행되는 방향 (default : normal)
+  ex) normal, reversem, alternate, alternate-reverse
+*/
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: lemonchiffon;
+    position: relative;
+    animation-name: my-ani;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* box의 애니메이션 */
+@keyframes my-ani{
+    0%{
+        left: 0px;
+    }
+    25%{
+        left: 20px;
+    }
+    50%{
+        left: 400px;
+    }
+    75%{
+        left: 200px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+.bounce-ball01{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: pink;
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    /* ease vs ease in out은 대칭적으로 느림-> 빠름-> 느림
+       공이 떨어질때 : 빠름-> 느림(ease out)
+       공이 다시 튀어오를때 : 느림 -> 빠름(ease in) */
+    /* normal : from -> to -> from -> to
+    alternate : from -> to -> to -> from*/
+    animation: bounce1 1s ease-out infinite alternate;
+
+}
+
+@keyframes bounce1{
+    from{
+        top: 300px;
+       
+
+    }
+    to{
+        top: 0px;
+    }
+}
+.bounce-ball02{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: mediumspringgreen;
+    position: absolute;
+    bottom: 0;
+    animation: bounce2 2s infinite;
+}
+@keyframes bounce2 {
+    from,to{
+        buttom:0;
+        width: 55px;
+        animation-timing-function: ease-out;
+        
+        }
+    50%{
+        width: 50px;
+        bottom: 300px;
+        animation-timing-function: ease-in;
+    }
+    
+}
