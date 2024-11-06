@@ -69,6 +69,7 @@ const letters = [
 	["가", "수", "림", "나"],
 	["아", "으", "차", "운"],
 ];
+console.log(typeof ["사"])
 console.log(letters[3][0]+letters[1][3]+letters[0][1]+letters[0][3]+letters[2][2])
 // 연습문제 02 : 8뽑기
 const nums = [
@@ -114,11 +115,13 @@ console.log(typeof und)
 console.log(typeof NaN)
 console.log(typeof function(){})
 
+
 // 과제
 console.log(`${typeof 123} isn't ${typeof ""} data type.`)
 console.log(typeof 123+ ' isn\'t' + typeof "" +" data type.")
 console.log('typeof 를 array나 null에 사용하면, "' + typeof null +'"결과를 얻을 수 있습니다.')
-
+// 
+console.log(typeof 3 + "isn't" + typeof "문자"+ 'data type.')
 // 명시적 형변환
 console.log("-------------")
 // 1. ??? >> string
