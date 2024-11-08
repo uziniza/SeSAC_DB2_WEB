@@ -24,7 +24,17 @@
         //     }
         // }
         // console.log(diff)
-        
+
+
+        let same2=[]
+        let dif2=[]
+        for(let fru of fruits1){
+            if(fruits2.includes(fru)){
+                same2.push(fru)
+            }else{dif2.push(fru)}
+        }
+        console.log(same2)
+        console.log(dif2)
     </script>
 </head>
 <body>

@@ -123,3 +123,14 @@ while(confirm("계속 진행하시겠습니까?")){
     a2++
     alert(`${a2}번째 alert창`)
 }
+
+let i =1
+let j =2
+while(i<10){
+    console.log(`-----${i}딘`)
+    while(j<10){
+        console.log(`${i}*${j}=${i*j}`)
+        j++
+    }i++
+    j=1
+}

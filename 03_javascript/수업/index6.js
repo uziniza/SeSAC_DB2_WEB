@@ -33,7 +33,7 @@ console.log(fruit.indexOf("a"))//0
 console.log(fruit.indexOf("apple"))//0
 console.log(fruit.indexOf("mango"))//5
 console.log(fruit.indexOf("z"))//-1: 없는 문자열을 찾으려고 하면 반환되는 값
-//2) charAt : 소괄호 안에 숫자
+//2) charAt : 소괄호 안에 숫자,문자열에서 특정 위치에 있는 문자를 반환(인덱스값을 넣음 소괄호안). 
 console.log(fruit.charAt(0))
 console.log(fruit.charAt(8))
 console.log(fruit.charAt(10))// 없으면 ''빈문자열

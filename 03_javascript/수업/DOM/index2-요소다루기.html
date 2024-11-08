@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>요소다루기</title>
-    <style></style>
+    <style>
+        img{
+            width: 150px;
+        }
+        .add-h1 {
+            color: yellowgreen;
+            text-align: center;
+            font-size: 30px;
+            background-color: black;
+         }
+
+        .p-2 {
+            background-color: yellow;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .p-3 {
+            background-color: skyblue;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .friends {
+            background-color: pink;
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+    </style>
     <script defer src="./index2.js"></script>
 </head>
 <body>
     <h1>Js 요소 다루기</h1>
+    <!-- innerHTML,innerText,textContent -->
     <div id="div1">여기는 <b>first</b> div 태그 입니다.</div>
-    
+
+    <!-- 속성 다루기-->
+     <img src="../../../02_css/실습/css02/img/geGngQMnvmK2g3wuKU4O1uNs8Ix1HXQULk9PrnT57lHOlU4AxL9qsNCYXOOY9DIqPWtXnphq8G6NzCcvzv-ppQ.webp" alt="kawa" id="kawa" />
+     <a href="https://www.naver.com" id="naver">네이버로 가기</a>
+
+    <!-- style변경, class변경 -->
+     <ul id="friends">
+        <li>이요르</li>
+        <li id="tigger">티거</li>
+        <li>피글렛</li>
+        <li>로빈</li>
+     </ul>
+    <!-- 요소 생성,추가,삭제 -->
+     <div class="container"></div>
 </body>
 </html>
