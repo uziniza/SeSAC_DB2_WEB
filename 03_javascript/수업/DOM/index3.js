@@ -18,6 +18,10 @@ btn1.addEventListener("mouseover", function(){
     // btn1.style.backgroundColor="pink"//아래 코드와 같음
     this.style.backgroundColor="pink"//this는 자기자신을 가리킴
 })
+btn1.addEventListener("mouseout", function(){
+    // btn1.style.backgroundColor="pink"//아래 코드와 같음
+    this.style.backgroundColor="black"//this는 자기자신을 가리킴
+})
 //btn2를 눌렀을 때, div를 자식으로 붙이기
 const container = document.getElementById("container")
 btn2.addEventListener("click",()=>{
