@@ -33,21 +33,30 @@
       let result1=document.querySelector("#result")
       function cal() {
         switch(operator.value){
-            case"+": num1.value*num2.value = result.value;
+          case "+" :
+            result1.value = Number(num1.value)+Number(num2.value)
             break;
-            case"-": num1.value-num2.value;
-            break;
-            case"*": num1.value*num2.value;
-            break;
-            case"/": num1.value/num2.value;
-            break;
+          
+
+          case "*" :
+            result1.value = Number(num1.value)*Number(num2.value)
+          break;
+
+          case "-" :
+            result1.value = Number(num1.value)-Number(num2.value)
+          break;
+
+          case "/" :
+          result1.value = Number(num1.value)/Number(num2.value)
+
         }
-        }
+        
+      }
 
       // [초기화] 버튼 클릭시 resetInput() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
       function resetInput() {
         num1.value=""
-        num1.value=""
+        num2.value=""
         operator.value=""
         result.value=""
 
