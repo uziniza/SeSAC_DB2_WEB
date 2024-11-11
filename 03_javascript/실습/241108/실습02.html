@@ -64,6 +64,7 @@
         i.classList.remove("done")
         i.classList.add("todo")
       }
+      //classList를 사용할때 for문을 사용해서 배열의 요소 하나만을 뽑아와야함, 배열전체에 classlist사용 불가능함
       for(let j of todo){
         j.classList.remove("todo")
         j.classList.add("done")

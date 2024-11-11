@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header반응형 실습</title>
+    <script src="https://kit.fontawesome.com/2cf089bb0e.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul,ol{
+            list-style-type: none;
+        }
+        header{
+            background-color: skyblue;
+            width: 100%;
+            height: 60px;
+           
+        
+        }
+
+        header>.inner{
+            /* background: wheat; */
+            max-width: 1000px;
+            margin: 0 auto;
+
+            padding: 0 1rem;
+            position: relative;
+            top: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        header>.inner>.logo{
+            color: white;
+            font-size: 50px;
+        }
+
+        header>.inner>.menu{
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        header>.inner>.menu>li{
+            margin-right: 10px;
+        }
+        
+        
+
+        header>.inner>.menu-bar{
+            
+            color: black;
+          
+        }
+        header>.small-menu{
+            display: none;
+
+        }
+        @media screen and (max-width:768px){
+            header>.inner>.menu{
+            display: none;}
+
+            header>.inner>.logo{
+            display: flex;
+            margin: auto;
+            color: white;}
+            
+
+            header>.small-menu{
+                display: flex;
+                flex-direction: column;
+                
+                
+               
+            }
+            header>.small-menu>li{
+                display: flex;
+                background-color: aliceblue;
+                width: 100%;
+                height: 50px;
+            }
+      
+        }
+        
+            
+        
+       
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <i class="fa-solid fa-igloo logo"></i>
+            <ul class="menu">
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+            </ul>
+            <i class="fa-solid fa-bars menu-bar"></i>
+        </div>
+
+        <ul class="small-menu">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </header>
+</body>
+</html>

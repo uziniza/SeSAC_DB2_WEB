@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <style>
+        body{
+            background-color: coral;
+        }
+        .outer>.inner>h1{ /* 관계를 여러 개 걸쳐서 쓰면 우선순위가 높아짐 */
+            font-size: 32px;
+            color: red;
+        }
+        .pc{
+            display: block;
+        }
+        .mobile{
+            display: none;
+        }
+        /* 기준점
+        - max-width : XXXpx
+        -> XXXpx 이하일때,
+        -> 가장 큰 사이즈 먼저 제작 후 > > mobile사이트 제작
+        - min-width : XXXpx
+        -> XXXpx 이상일때
+        -> 가장 작은 사이즈 먼저 제작 후 > > pc사이트 제작
+        */
+        @media screen and (max-width: 700px) {
+            .outer>.inner>h1{
+                font-size: 16px;
+                color:white;
+            }
+            body{
+                background-color: pink;
+            }
+        }
+        @media (max-width: 500px){
+            .outer>.inner>h1{
+                font-size: 10px;
+                color:yellow;
+            }
+            body{
+                background-color: navy;
+            }
+        }
+        @media screen and (max-width:500px){
+            .mobile{
+                display: block;
+            }
+            .pc{
+                display: none;
+            }
+        }
+        @media screen and (min-width:300px){
+            .outer>.inner>h1{
+                color:pink;
+            }}
+       
+       
+    </style>
+</head>
+<body>
+    <div class="outer">
+            <div class="inner">
+                <h1>Hellow world</h1> 
+            </div>
+    </div>
+
+    <!-- 500px 기준으로 
+     - 모바일 환경에서는 모바일글자만 보이고 피시환경에서는 피시만 보이게 -->
+    <p class="mobile">mobile</p>
+    <p class="pc">pc</p>
+   
+</body>
+</html>
