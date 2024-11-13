@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body{
+            height: 600px;
+        }
+        header{
+            background-color: skyblue; 
+            height: 50px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        i{
+            font-size: 20px;
+            color: white;
+        }
+     
+        P{
+            text-align: end;
+        }
+        h5{
+            text-align: end;
+        }
+       
+        .form-control {
+        border-color: yellowgreen;
+        }
+        .form-label{
+          color: green;
+        }
+        .form-select{
+          border-color: yellowgreen;
+        }
+       .form-check-input{
+        border-color: yellowgreen;
+       }
+    
+
+    </style>
+</head>
+<body>
+    <!-- gnb -->
+    <header class="container-fluid d-flex align-items-center justify-content-between">
+        <img class="d-flex ms-3"src="https://i.namu.wiki/i/-9v9THAjqn5Ov-9p8bzPeCwPi1I_qH691H1xc_tF40OSb_069guBkW1t8RBwQ-DUdEk6xKLvuRWcGohNlwsOzBhdbZ8x9EiAc0VlDMBV5Ygc6boDCVmoFEgoHOJh44Irnod4q09V4ouH2kIi1eIcBA.svg" alt="먼작귀사진">   
+        <i class="bi bi-list me-3"></i>
+    </header>
+
+    <!-- content 01 -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-color: pink;">
+            <img src="https://i.namu.wiki/i/XDH2CDz5hQ_safBefBCvz7NOl8fiXoMg0HSIqhogw9XczaoE8N6rp9pS6Jz--_w8tX69eXr8NRRzUzUwnT-YPg.webp" class="d-block w-25 h-50 ms-3" alt="먼작귀1">
+            <div class="carousel-caption d-flex flex-column align-items-end justify-content-center" style="height: 100%;" >
+                <p style="font-size: 50px;" class="mt-5"> 🍞 </p>
+                <h5>행복한 먼작귀 빵집</h5>
+                <p>먼작귀 팝업에서 치이카와, 하치와레, 우사기 빵을 먹어보세요</p>
+              
+            </div>
+          </div>
+          <div class="carousel-item" style="background-color: lemonchiffon;">
+            <img src="https://i.namu.wiki/i/XDH2CDz5hQ_safBefBCvz7NOl8fiXoMg0HSIqhogw9XczaoE8N6rp9pS6Jz--_w8tX69eXr8NRRzUzUwnT-YPg.webp" class="d-block w-25 h-50 ms-3" alt="먼작귀2">
+            <div class="carousel-caption d-flex flex-column align-items-end justify-content-center" style="height: 100%;">
+              <p style="font-size: 50px;" class="mt-5"> 🍜 </p>
+              <h5 style="color: pink;" class="mt-0">먼작귀 라멘카페 ~~~</h5>
+              <p style="color: pink;">먼작귀에 나온 하치와레가 만든 라멘먹어보기</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-color: tomato;"> 
+            <img src="https://i.namu.wiki/i/XDH2CDz5hQ_safBefBCvz7NOl8fiXoMg0HSIqhogw9XczaoE8N6rp9pS6Jz--_w8tX69eXr8NRRzUzUwnT-YPg.webp" class="d-block w-25 h-50 ms-3" alt="먼작귀3">
+            <div class="carousel-caption d-flex flex-column align-items-end justify-content-center" style="height: 100%;">
+                <p style="font-size: 50px;" class="mt-5"> 🏠 </p>
+                <h5 style="color: mistyrose;">행복한 먼작귀 집</h5>
+              <p style="color: mistyrose;">동굴속에서 하치와레와 함께 동거하기</p>
+            </div>
+          </div>
+       </div>
+
+        <!-- content 2 -->
+        <span style="font-size: 30px; color: coral;background-color: lemonchiffon;" class="d-flex justify-content-center mt-5 ms-5 me-5">🍥치이카와 팝업 예약하기🍥</span>
+        <span style="color: lightslategray;" class="d-flex align-items-center flex-column mt-2">
+            <h5 class="d-flex">일시 : 2030.02.14 ~ 2030.02.29</h5>
+            <h5 class="d-flex">장소 : 용산 AK플라자 10층</h5>
+        </span>
+        <div class="d-flex justify-content-center align-items-center ">
+          <form class="row g-3 m-2 w-50 d-flex " style="margin: 0 auto;">
+            <div class="col-md-6">
+              <label for="inputName4" class="form-label">이름</label>
+              <input type="Name" class="form-control" id="inputName4" >
+            </div>
+            <div class="col-md-6">
+              <label for="inputGender4" class="form-label">성별</label>
+              <input type="Gender" class="form-control" id="inputGender4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">주소</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="서울특별시">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">날짜</label>
+              <select id="inputState" class="form-select">
+                <option selected>2030-02-14</option>
+                <option>2030-02-15</option>
+                <option>2030-02-16</option>
+                <option>2030-02-17</option>
+                <option>2030-02-18</option>
+                <option>2030-02-19</option>
+                <option>2030-02-20</option>
+                <option>2030-02-21</option>
+                <option>2030-02-22</option>
+                <option>2030-02-23</option>
+                <option>2030-02-24</option>
+                <option>2030-02-25</option>
+                <option>2030-02-26</option>
+                <option>2030-02-27</option>
+                <option>2030-02-28</option>
+                <option>2030-02-29</option>
+              </select>
+            </div>
+            <div class="col-md-2" style="position: relative; left: 110px;">
+              <label for="inputZip" class="form-label">타임</label>
+              <select type="inputZip" class="form-select">
+                <option>오전</option>
+                <option>오후</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck" style="color: green;">
+                  개인정보 수집 동의
+                </label>
+              </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <button type="submit" class="btn submitbtn" style="background-color: green; color: lemonchiffon;">예약하기</button>
+            </div>
+          </form>
+        </div>
+        
+        <footer style="background-color: paleturquoise; width: 100; height:150px;" class="container-fluid mt-5 ">
+          <div class="col mb-3 d-flex align-items-center justify-content-center">
+            <img class="d-flex ms-3"src="https://i.namu.wiki/i/-9v9THAjqn5Ov-9p8bzPeCwPi1I_qH691H1xc_tF40OSb_069guBkW1t8RBwQ-DUdEk6xKLvuRWcGohNlwsOzBhdbZ8x9EiAc0VlDMBV5Ygc6boDCVmoFEgoHOJh44Irnod4q09V4ouH2kIi1eIcBA.svg" alt="먼작귀사진">
+            <ul class="nav d-flex align-items-center m-5 justify-content-center ">
+              <li class="nav-item me-5"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item me-5"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+              <li class="nav-item me-5"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+              <li class="nav-item me-5"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item me-5"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            </ul>
+          </div>
+
+        </footer>
+
+   
+
+    <!-- bootstrap js cdn -->
+    <script>
+      let btn=document.querySelector('.submitbtn')
+      btn.addEventListener("click", function(){
+          alert("예약이 접수되었습니다!!₍ᐢ•ﻌ•ᐢ₎*･ﾟ｡☆")
+      })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
