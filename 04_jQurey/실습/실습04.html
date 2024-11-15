@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습04</title>
+    <script></script>
+    <style>
+       h2{
+        text-align: center;
+        color: green;
+    }
+        .sun{
+            color: red;
+        }
+        .sat{
+            color: blue;
+        }
+       
+        table{
+            table-layout: fixed;
+            text-align: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+            let date = $('#date').val();
+            let content = $('#content').val();
+            let daycell = $('#day-'+ date);
+
+            if(daycell.length){
+                daycell.html(date+"<br>"+content);
+            }else{
+                alert("유효한 날짜를 입력하세요")
+            }})
+        })
+       
+    </script>
+</head>
+<body>
+    날짜 : <input type="text" id="date">
+     <br>
+     내용 : <input type="text" id="content">
+    <br>
+    <button id="btn">작성</button>
+    <h2>2024년 11월</h2>
+    <table id="table" align="center" width="600px"; height="500px";>
+        <tr>
+            <td class="sun">일</td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td>
+            <td class="sat">토</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="day-1">1</td>
+            <td id="day-2">2</td>
+            <td class="sat" id="day-3">3</td>
+            
+        </tr>
+        <tr>
+            <td class="sun" id="day-4">4</td>
+            <td id="day-5">5</td>
+            <td id="day-6">6</td>
+            <td id="day-7">7</td>
+            <td id="day-8">8</td>
+            <td id="day-9">9</td>
+            <td class="sat" id="day-10">10</td>
+
+        </tr>
+        <tr>
+            <td class="sun" id="day-11">11</td>
+            <td id="day-12">12</td>
+            <td id="day-13">13</td>
+            <td id="day-14">14</td>
+            <td id="day-15">15</td>
+            <td id="day-16">16</td>
+            <td class="sat" id="day-17">17</td>
+        </tr>
+        <tr>
+            <td class="sun" id="day-18">18</td>
+            <td id="day-19">19</td>
+            <td id="day-20">20</td>
+            <td id="day-21">21</td>
+            <td id="day-22">22</td>
+            <td id="day-23">23</td>
+            <td class="sat" id="day-24">24</td>
+
+        </tr>
+        <tr>
+            <td class="sun"id="day-25" >25</td>
+            <td id="day-26">26</td>
+            <td id="day-27">27</td>
+            <td id="day-28">28</td>
+            <td id="day-29">29</td>
+            <td id="day-30">30</td>
+
+        </tr>
+       
+            
+        </tr>
+    </table>
+    
+    
+</body>
+</html>
