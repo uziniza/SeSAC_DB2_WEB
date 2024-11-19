@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백 지옥 경험하기</title>
+  </head>
+  <body>
+    <h1>배경색이 1초에 한번씩 변경이 됩니다.</h1>
+    <script>
+      // setTimeout(() => {
+      //   document.body.style.background = "red";
+      //   setTimeout(() => {
+      //     document.body.style.background = "orange";
+      //     setTimeout(() => {
+      //       document.body.style.background = "yellow";
+      //       setTimeout(() => {
+      //         document.body.style.background = "green";
+      //         setTimeout(() => {
+      //           document.body.style.background = "blue";
+      //         }, 1000);
+      //       }, 1000);
+      //     }, 1000);
+      //   }, 1000);
+      // }, 1000);
+
+      function changeColor(color){
+        return new Promise(function(resolve,reject){
+            setTimeout(function(){
+               document.body.style.backgroundColor = color;
+               resolve();
+            },1000);
+        })
+      }
+    //   changeColor("red")
+    //   .then(()=> {
+    //     return changeColor("orange")})
+    //     .then(()=> {
+    //         return changeColor("yellow")})
+    //         .then(()=> {
+    //         return changeColor("yellowgreen")})
+    //         .then(()=> {
+    //         return changeColor("green")})
+    //         .then(()=> {
+    //         return changeColor("blue")})
+    //         .then(()=> {
+    //             return changeColor("navy")})
+    //         .then(()=> {
+    //         return changeColor("purple")})
+    async function cc(){
+        await changeColor("red");
+        await changeColor("orange");
+        await changeColor("yellow");
+        await changeColor("yellowgreen");
+        await changeColor("green");
+        await changeColor("blue");
+        await changeColor("navy");
+        await changeColor("purple");
+    }
+    cc();
+        </script>
+        </body>
+        </html>
+
+        
+            
+            
