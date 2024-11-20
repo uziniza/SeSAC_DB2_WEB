@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+        .box{
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            height: 40px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center; 
+            text-align: center;
+        }
+        .n1{
+            color: orange;
+        }
+        .n2{
+            color: red;
+            font-weight: 700;
+        }
+        .n3{
+            color:aqua;
+            font-weight: 700;
+        }
+        .n4{
+            color: cadetblue;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h2>결과 확인하기</h2>
+    <h3><span class="n1"><%=userinfo.name%></span> 님 환영합니다!</h3>
+    <div class="box">성별: <%=userinfo.gender%> </div>
+    <div class="box">생년월일: <%=userinfo.calender%> </div>
+    <div class="box">관심사: <%=userinfo.favorite%></div>
+    <hr>
+    <h3>다른 태그 작성해보기</h3>
+    <span>좋아하는 색깔 : <span class="n2"><%=userinfo.color%></span></span>
+    <br>
+    <br>
+
+    <span>좋아하는 숫자 : <span class="n3"><%=userinfo.number%></span></span>
+    <br>
+    <br>
+
+    <span>다짐한마디 : <span class="n4"><%=userinfo.message%></span></span>
+    <br>
+    <br>
+
+    <a href="/practice02">홈으로 이동하기</a>
+    
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice01</title>
+</head>
+<body>
+    <h1>실습문제 1</h1>
+    <form action="/practice1form" method="get">
+        이름 <input type="text" name="name">
+        <fieldset>
+            <legend>성별</legend>
+            <label for="gender">
+                <input type="radio" name="gender" value="남자">남자
+            </label>
+            <label for="gender">
+                <input type="radio" name="gender" value="여자">여자
+            </label>    
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>생년월일</legend>
+            <input type="date" name="calender">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>관심사</legend>
+            <label for="favorite">
+                <input type="checkbox" name="favorite" value="여행">여행
+            </label>
+            <label for="favorite">
+                <input type="checkbox" name="favorite" value="패션">패션
+            </label>    
+            <label for="favorite">
+                <input type="checkbox" name="favorite" value="음식">음식
+            </label> 
+        </fieldset>
+        <br>
+        <button>회원가입</button>
+        
+
+    </form>
+
+</body>
+</html>
