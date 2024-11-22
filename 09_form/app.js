@@ -61,14 +61,16 @@ app.get('/practice02',function(req,res){
 app.get('/practice1form',function(req,res){
     console.log(req.query);
     res.render('practice/practice_result',{
-        userinfo : req.query
+        userinfo : req.query,
+        addInfo: false //practice1에서는 적은 정보를 주고 있음
     })
 })
 
 app.post('/practice2form',function(req,res){
-    console.log(req.query);
+    console.log(req.body);
     res.render('practice/practice_result',{
-        userinfo : req.body
+        userinfo : req.body,
+        addInfo: false
     })
 })
 

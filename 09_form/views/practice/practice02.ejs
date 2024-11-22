@@ -6,7 +6,7 @@
     <title>practice02</title>
 </head>
 <body>
-    <h1>실습문제 1</h1>
+    <h1>실습문제 2</h1>
     <form action="/practice2form" method="post">
         이름 <input type="text" name="name">
         <fieldset>
@@ -39,14 +39,21 @@
         <br>
         <fieldset>
             <legend>선택</legend>
-            좋아하는 색상 <input type="color" name="color">
+            <label>
+                좋아하는 색상
+                <input type="color" name="color">
+            </label>
             <br>
-            좋아하는 숫자 <input type="password" name="number">
+            <label>
+                좋아하는 숫자
+                <input type="number" name="number">
+            </label>
+             
         </fieldset>
         <br>
         <fieldset>
             <legend>다짐 한마디</legend>
-            <input type="text" name="message">
+            <textarea name="comment" cols="30" rows="10"></textarea>
         </fieldset>
         <br>
         <button>회원가입</button>

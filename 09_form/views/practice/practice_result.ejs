@@ -9,11 +9,13 @@
             background-color: white;
             border: 1px solid lightgray;
             border-radius: 10px;
-            height: 40px;
             margin-bottom: 5px;
             display: flex;
             align-items: center; 
             text-align: center;
+            padding: 10px;
+            height: 20px;
+
         }
         .n1{
             color: orange;
@@ -39,20 +41,32 @@
     <div class="box">생년월일: <%=userinfo.calender%> </div>
     <div class="box">관심사: <%=userinfo.favorite%></div>
     <hr>
-    <h3>다른 태그 작성해보기</h3>
-    <span>좋아하는 색깔 : <span class="n2"><%=userinfo.color%></span></span>
+    
+    <% if(addInfo){ %>
+        <h3>다른 태그 작성해보기</h3>
+        <span>좋아하는 색깔 : <span class="n2"><%=userinfo.color%></span></span>
+        <br>
+        <br>
+    
+        <span>좋아하는 숫자 : <span class="n3"><%=userinfo.number%></span></span>
+        <br>
+        <br>
+    
+        <span>다짐한마디 : <span class="n4"><%=userinfo.comment%></span></span>
+    <%}%>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            const colorSpan = document.querySelector(".n2");
+            colorSpan.style.color = "<%=userinfo.color%>"
+        })
+    </script>
+   
     <br>
     <br>
 
-    <span>좋아하는 숫자 : <span class="n3"><%=userinfo.number%></span></span>
+    <a href="/practice01">실습문제 1로 이동하기</a>
     <br>
-    <br>
-
-    <span>다짐한마디 : <span class="n4"><%=userinfo.message%></span></span>
-    <br>
-    <br>
-
-    <a href="/practice02">홈으로 이동하기</a>
+    <a href="/practice02">실습문제 2로 이동하기</a>
     
     
 </body>

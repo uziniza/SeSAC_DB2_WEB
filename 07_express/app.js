@@ -10,6 +10,7 @@ app.set("/views", "views");
 // static 폴더 설정 추가
 app.use("/static", express.static(__dirname + "/public"));
 // /static 이라는 경로를 /public 대신에 사용할거다!
+// 이미지 파일을 불러오지 못함 (정적 파일을 사용할 수 없음 그래서 만들어주는 파일)
 
 app.get("/", function (request, response) {
   /* 

@@ -11,11 +11,15 @@
         이름 <input type="text" name="name">
         <fieldset>
             <legend>성별</legend>
-            <label for="gender">
-                <input type="radio" name="gender" value="남자">남자
+            <!-- 라벨 하나에 input태그 한개씩만 -->
+            <!-- name -> 라디오 항목이 하나로 묶어주는 것 -->
+            <label> 
+                <input type="radio" name="gender" value="남자">
+                <span>남자</span>
             </label>
-            <label for="gender">
-                <input type="radio" name="gender" value="여자">여자
+            <label>
+                <input type="radio" name="gender" value="여자">
+                <span>여자</span>
             </label>    
         </fieldset>
         <br>
@@ -23,17 +27,22 @@
             <legend>생년월일</legend>
             <input type="date" name="calender">
         </fieldset>
+        
+        
         <br>
         <fieldset>
             <legend>관심사</legend>
-            <label for="favorite">
-                <input type="checkbox" name="favorite" value="여행">여행
+            <label>
+                <input type="checkbox" name="favorite" value="여행">
+                <span>여행</span>
             </label>
-            <label for="favorite">
-                <input type="checkbox" name="favorite" value="패션">패션
+            <label>
+                <input type="checkbox" name="favorite" value="패션">
+                <span>패션</span>
             </label>    
-            <label for="favorite">
-                <input type="checkbox" name="favorite" value="음식">음식
+            <label>
+                <input type="checkbox" name="favorite" value="음식">
+                <span>음식</span>
             </label> 
         </fieldset>
         <br>
