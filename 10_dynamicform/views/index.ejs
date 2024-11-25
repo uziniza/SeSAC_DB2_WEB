@@ -46,6 +46,9 @@
       <button type="button" onclick="fetchPost()">fetch POST 제출</button>
     </form>
     <div class="result"></div>
+
+    <hr />
+    <a href="/api">외부 api 사용</a>
     <script>
       const resultBox = document.querySelector(".result");
       function ajaxGet() {
@@ -249,33 +252,32 @@
             console.error("err", err);
           });
       }
-      async function fetchPost(){
-        const form = document.forms["register"]
+      async function fetchPost() {
+        const form = document.forms["register"];
         const data = {
-            name : form.name.value,
-            gender: form.gender.value
+          name: form.name.value,
+          gender: form.gender.value,
         };
-        try{
-            const res = await fetch('/fetch',{
-                method: 'post',
-                body: JSON.stringify(data),//제이슨 형식으로 보내야함
-                headers:{
-                    "Content-Type": "application/json",// 우리가 보낼 데이터에 대한 정보를 담아줌
-                },
-            })
-            console.log(res);
-            //json(),text() : 시간이 걸리는 작업 -> await사용
-            const result = await res.json();
-            console.log(result);
-            const{name, gender} = result
-            resultBox.textContent=`post /fetch요청 결과 : ${name}의 성별은 ${gender}`
-            resultBox.style.color="lime"
-        } catch(err){
-            console.error(err)
+        try {
+          const res = await fetch("/fetch", {
+            method: "post",
+            body: JSON.stringify(data), //제이슨 형식으로 보내야함
+            headers: {
+              "Content-Type": "application/json",
+              // 우리가 보낼 데이터에 대한 정보를 담아줌
+            },
+          });
+          console.log(res);
+          //json(),text() : 시간이 걸리는 작업 -> await사용
+          const result = await res.json();
+          console.log(result);
+          const { name, gender } = result;
+          resultBox.textContent = `post /fetch요청 결과 : ${name}의 성별은 ${gender}`;
+          resultBox.style.color = "lime";
+        } catch (err) {
+          console.error(err);
         }
       }
-        
-      
     </script>
   </body>
 </html>
