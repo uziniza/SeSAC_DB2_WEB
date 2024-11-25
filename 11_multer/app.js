@@ -12,6 +12,8 @@ app.set("views", "./views");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // 3. static 폴더설정
+app.use("/static", express.static(__dirname + "/public")); //__dirname
+app.use("/uploads", express.static(__dirname + "/uploads")); //__dirname
 // 4. multer 설정
 const upload = multer({
   dest: "uploads/", //어디에 저장될지?
@@ -56,12 +58,47 @@ app.post("/upload", uploadDetail.single("userfile"), (req, res) => {
   //   }
   res.send("응답 완료");
 });
-//하나의 input에 여러개의 파일
+//하나의 input에 여러개의 파일(.array)
 app.post("/uploads/array", uploadDetail.array("mulifiles"), (req, res) => {
   console.log(req.body);
   //   console.log(req.file); = undefined
-  console.log(req.files);
+  console.log(req.files); //파일 여러개일떄
+  //   {
+  //     fieldname: 'mulifiles',
+  //     originalname: 'á\x84\x89á\x85³á\x84\x8Fá\x85³á\x84\x85á\x85µá\x86«á\x84\x89á\x85£á\x86º 2024-11-13 á\x84\x8Bá\x85©á\x84\x92á\x85® 2.32.38.png',
+  //     encoding: '7bit',
+  //     mimetype: 'image/png',
+  //     destination: 'uploads/',
+  //     filename: 'á\x84\x89á\x85³á\x84\x8Fá\x85³á\x84\x85á\x85µá\x86«á\x84\x89á\x85£á\x86º 2024-11-13 á\x84\x8Bá\x85©á\x84\x92á\x85® 2.32.381732518368841.png',
+  //     path: 'uploads/á\x84\x89á\x85³á\x84\x8Fá\x85³á\x84\x85á\x85µá\x86«á\x84\x89á\x85£á\x86º 2024-11-13 á\x84\x8Bá\x85©á\x84\x92á\x85® 2.32.381732518368841.png',
+  //     size: 206598
+  //   }
   res.send("업로드 완료!!-3-");
+});
+
+//여러개의 input에 파일업로드 = .fields()
+//fields의 매개변수는 배열[{name:'설정해준 name값'}]
+app.post(
+  "/uploads/fields",
+  uploadDetail.fields([
+    { name: "file1" },
+    { name: "file2" },
+    { name: "file3" },
+  ]),
+  (req, res) => {
+    console.log(req.files); //객체 형태로 들어옴
+    console.log(req.body);
+    res.send("업로드 완료!!!!-ㅅ-");
+  }
+  /*
+{filename1: [{업로드 파일 정보}],파일 name2:[업로드파일정보]}
+  */
+);
+
+//동적 파일 업로드
+app.post("/dynamicUpload", uploadDetail.single("dynamicFile"), (req, res) => {
+  console.log(req.file);
+  res.send(req.file);
 });
 //2. 포트열어줌
 app.listen(PORT, () => {
