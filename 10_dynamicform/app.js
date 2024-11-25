@@ -10,8 +10,6 @@ app.set("views", "./views");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const realId = "aaa";
-const realPw = "0000";
 //api
 app.get("/", (req, res) => {
   res.render("index");
@@ -62,6 +60,7 @@ app.get("/practice01", (req, res) => {
 });
 
 app.get("/axiospractice", (req, res) => {
+  console.log(req.query);
   res.send(req.query);
 });
 
@@ -69,13 +68,18 @@ app.get("/practice02", (req, res) => {
   res.render("practice02");
 });
 
-app.post("/axiospractice02", (req, res) => {
-  const { id, pw } = req.body; // 요청 데이터를 가져옴
-  if (id === realId && pw === realPw) {
-    res.send({ success: true, id }); // 로그인 성공
+const realId = "banana";
+const realPw = "4321";
+
+app.post("/practice02", (req, res) => {
+  console.log(req.body);
+  const { userId, userPw } = req.body;
+  if (userId === realId && userPw === realPw) {
+    res.send({ isSuccess: true, userId: userId });
   } else {
-    res.send({ success: false }); // 로그인 실패
+    res.send({ isSuccess: false });
   }
+  // res.send("응답완료");
 });
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);

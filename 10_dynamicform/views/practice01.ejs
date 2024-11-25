@@ -54,6 +54,7 @@
       </fieldset>
       <br />
       <button type="button" onclick="logIn(event)">회원가입</button>
+      <br /><br />
       <div class="result"></div>
     </form>
 
@@ -75,6 +76,10 @@
           resultBox.innerText = "이름을 입력해주세요..";
           return;
         }
+        // const favValue = [];
+        // form.favorite.forEach((input) => {
+        //   if (input.checked) favValue.push(input.value);
+        // });
 
         if (!Array.from(form.gender).some((radio) => radio.checked)) {
           resultBox.innerText = "성별을 선택해주세요..";
@@ -98,7 +103,7 @@
             params: data,
           });
           const { name, gender, birth, favorite } = response.data;
-          resultBox.textContent = `${name}님 환영합니다! 가입이 완료되었습니다-u- !! 취미는 ${favorite}`;
+          resultBox.textContent = `${birth}${name}님 환영합니다! 가입이 완료되었습니다-u- !! 취미는 ${favorite}`;
           resultBox.style.color = "aqua";
         } catch (err) {
           console.error(err);
