@@ -9,6 +9,9 @@ app.set("views", "./views");
 // 2. body-parser설정
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+const realId = "aaa";
+const realPw = "0000";
 //api
 app.get("/", (req, res) => {
   res.render("index");
@@ -54,6 +57,26 @@ app.get("/api", (req, res) => {
   res.render("api");
 });
 
+app.get("/practice01", (req, res) => {
+  res.render("practice01");
+});
+
+app.get("/axiospractice", (req, res) => {
+  res.send(req.query);
+});
+
+app.get("/practice02", (req, res) => {
+  res.render("practice02");
+});
+
+app.post("/axiospractice02", (req, res) => {
+  const { id, pw } = req.body; // 요청 데이터를 가져옴
+  if (id === realId && pw === realPw) {
+    res.send({ success: true, id }); // 로그인 성공
+  } else {
+    res.send({ success: false }); // 로그인 실패
+  }
+});
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
