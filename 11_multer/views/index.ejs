@@ -100,7 +100,40 @@
           img.src = `/${res.data.path}`;
         });
       }
-      function fileAndTextUpload() {}
+      function fileAndTextUpload() {
+        const formData = new FormData();
+        // input[type="file"], 파일 정보를 서버로 보내기 위해 선택
+        const file = document.getElementById("dynamicFile");
+        // input[type="text"],
+        // 이미지에 대한 제목, 즉, 글자 정보를 서버로 보내기 위해 선택
+        const title = document.getElementById("dynamicText");
+        // img 태그
+        // 사진의 src, alt 속성을 바꾸기 위해서 선택
+        const img = document.querySelector("img");
+
+        console.log(file.files);
+
+        formData.append("dynamicFile", file.files[0]);
+        formData.append("dynamicTitle", title.value);
+
+        /* 
+        formData = {
+          dynamicFile: 파일정보(fileList[0])
+          dynamicTitle: "사진 제목 string"
+        }
+        */
+
+        axios({
+          method: "post",
+          url: "/dynamicUpload",
+          data: formData,
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }).then((res) => {
+          console.log(res.data);
+        });
+      }
     </script>
   </body>
 </html>

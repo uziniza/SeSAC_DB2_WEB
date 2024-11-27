@@ -99,7 +99,11 @@ app.post(
 app.post("/dynamicUpload", uploadDetail.single("dynamicFile"), (req, res) => {
   console.log(req.file);
   res.send(req.file);
+  // 하나의 객체에 합쳐서 보내는 방법
+  // res.send({ ...req.body, ...req.file });
+  res.send({ file: req.file, fileInfo: req.body });
 });
+
 //2. 포트열어줌
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
