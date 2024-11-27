@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice</title>
+    <style>
+      label {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      id="form"
+      action="/upload"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" />
+        <br />
+        <label for="pw">비밀번호</label>
+        <input type="password" id="pw" name="pw" />
+        <br />
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" />
+        <br />
+        <label for="age">나이</label>
+        <input type="number" id="age" name="age" />
+        <br />
+        <label for="fileUpload">프로필 사진</label>
+        <input type="file" id="fileUpload" name="fileUpload" />
+        <br />
+        <button type="reset">리셋</button>
+        <button type="submit">회원가입</button>
+      </div>
+    </form>
+    <script>
+      function resetForm() {
+        const form = document.getElementById("form");
+        form.reset();
+        return;
+      }
+    </script>
+  </body>
+</html>
