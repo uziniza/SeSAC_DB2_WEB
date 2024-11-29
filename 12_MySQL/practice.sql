@@ -47,4 +47,4 @@ SELECT * FROM user ORDER BY birthday ASC;
 SELECT gender, name FROM user where gender = "M" ORDER BY name DESC;
 SELECT id, name FROM user where birthday LIKE "1990%";
 SELECT * FROM user WHERE birthday LIKE "%06%" ORDER BY birthday ASC;
-SELECT * FROM user WHERE gender = "M" AND birthday BETWEEN 1970 AND 1979;
+SELECT * FROM user WHERE gender = "M" AND birthday LIKE "197%";
