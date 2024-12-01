@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controller/Cuser");
-//get /user
-router.get("/", controller.getuser);
+const Cuser = require("../controllers/Cuser");
+
+router.get("/", Cuser.getLoginPage);
+router.post("/login", Cuser.login);
+
 module.exports = router;
