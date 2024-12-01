@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+      label {
+        display: flex;
+      }
+      span {
+        width: 60px;
+      }
+      .success {
+        color: blue;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+      .fail {
+        color: red;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>
+        <span>아이디</span>
+        <input type="text" name="userid" />
+      </label>
+      <label>
+        <span>비밀번호</span>
+        <input type="text" name="userpw" />
+      </label>
+      <button type="button" onclick="login()">로그인</button>
+      <div class="result"></div>
+    </form>
+
+    <script>
+      function login() {
+        const result = document.querySelector(".result");
+        const form = document.querySelector("form");
+        const data = {
+          userid: form.userid.value,
+          userpw: form.userpw.value,
+        };
+
+        axios({
+          url: "/login",
+          method: "post",
+          data: data,
+        })
+          .then((res) => {
+            if (res.data.success) {
+              result.innerText = `${res.data.name}님 환영합니다!`;
+              result.classList.add("success");
+              result.classList.remove("fail");
+            } else {
+              result.innerText =
+                "로그인 실패! 아이디와 비밀번호를 다시 입력해 주세요.";
+              result.classList.add("fail");
+              result.classList.remove("success");
+            }
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      }
+    </script>
+  </body>
+</html>
