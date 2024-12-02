@@ -9,24 +9,17 @@ app.set("views", "./views");
 // 2. body-parser 설정
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+// 3. 라우터 설정
+// const indexRouter = require("./routes");
+const indexRouter = require("./routes/index");
+app.use("/", indexRouter);
 
-app.get("/", (req, res) => {
-  res.render("index");
-  const realId = "banana";
-  const realPw = "4321";
+//404 설정
+app.get("*", (req, res) => {
+  res.send("<h2>Page Not Found</h2>");
 });
-const realId = "banana";
-const realPw = "4321";
-app.post("/login", (req, res) => {
-  console.log(req.body);
-  const { userId, userPw } = req.body;
-  if (userId === realId && userPw === realPw) {
-    res.send({ isSuccess: true, userId: userId });
-  } else {
-    res.send({ isSuccess: false });
-  }
-});
-//3. 포트설정
+
+//4. 포트설정
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
